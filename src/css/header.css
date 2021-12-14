@@ -1,0 +1,95 @@
+header {
+    top: 0;
+    right: 0;
+    left: 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background: #333;
+    transition: background 0.2s;
+    color: white;
+  }
+  
+  header > .content {
+    position: relative;
+  
+    width: 100%;
+    padding: 1.5rem;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header > .content > nav {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+  
+    padding: 1rem 2rem 2.25rem;
+  
+    opacity: 0;
+  
+    z-index: 1;
+    transition: all 0.4s;
+  }
+  
+  header > .content > nav.overlay {
+    top: 100%;
+    opacity: 1;
+  }
+
+  header > .content > nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  header > .content > nav > ul > li {
+    width: 100%;
+  
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  header > .content > nav > ul > li > a {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text-body);
+  
+    transition: filter 0.2s;
+  }
+  
+  header > .content > nav > ul > li > a:hover {
+    filter: brightness(0.9);
+  }
+
+  header > .content > nav {
+    position: initial;
+
+    opacity: 1;
+
+    padding: 0;
+
+    background: none;
+  }
+
+  header > .content > nav > ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header > .content > nav > ul > li {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  header > .content > nav > ul > li + li {
+    margin-left: 0.875rem;
+  }
